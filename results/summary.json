@@ -3532,5 +3532,24 @@
       "diff_perc_including_failures": 80.25008,
       "diff_perc_excluding_failures": 97.59519
     }
+  },
+  {
+    "began": "2025-03-15T05:28:05.092299678Z",
+    "finished": "2025-03-15T08:21:32.034978638Z",
+    "fontc_rev": "b65a27dd",
+    "pip_freeze_sha": "2dbead45ed2dd92a86afd486455bdbc90a54fef1  -",
+    "results_file": "2025-03-15-044246.json",
+    "input_file_sha": "821d8bae2066485083d235e63c294813295c6c91  /home/fsanches/devel/github_felipesanches/fontc_crater/targets.json",
+    "stats": {
+      "total_targets": 1205,
+      "identical": 470,
+      "produced_diff": 522,
+      "fontc_failed": 35,
+      "fontmake_failed": 50,
+      "both_failed": 123,
+      "other_failure": 5,
+      "diff_perc_including_failures": 80.351395,
+      "diff_perc_excluding_failures": 97.60426
+    }
   }
 ]
