@@ -17,7 +17,7 @@ export FONTC_CRATER_INPUT=$(realpath "targets.json")
 
 GENERATED_HTML="$FONTC_CRATER_RESULTS/index.html"
 LOCKFILE="$FONTC_CRATER_RESULTS/CRATER.lock"
-FONTC_REPO=https://github.com/googlefonts/fontc.git
+FONTC_REPO=https://github.com/felipesanches/fontc.git
 FONTC_DIR=./fontc
 FONTC_REQUIREMENTS="$FONTC_DIR/resources/scripts/requirements.txt"
 # relative to FONTC_DIR
@@ -43,7 +43,7 @@ else
 fi
 
 # make sure that the upstream repo is configured to authenticate with our token:
-git remote set-url origin "https://$GITHUB_TOKEN:x-oauth-basic@github.com/googlefonts/fontc_crater.git"
+git remote set-url origin "https://$GITHUB_TOKEN:x-oauth-basic@github.com/felipesanches/fontc_crater.git"
 
 if [ $? -ne 0 ]; then
     echo "failed to set upstream"
@@ -64,14 +64,14 @@ if [ -d venv ]; then
 fi
 
 echo "setting up venv"
-python -m venv venv
+python3 -m venv venv
 if [ $? -ne 0 ]; then
     echo could not setup venv, exiting
     cleanup
     exit 1
 fi
 
-source venv/bin/activate
+. venv/bin/activate
 
 echo "fetching fontc"
 if git clone $FONTC_REPO $FONTC_DIR ; then
